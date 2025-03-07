@@ -63,6 +63,50 @@
             background-color: #2980b9;
         }
         
+        /* Password form styles */
+        .password-container {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        
+        #password-input {
+            padding: 0.8rem;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        #submit-password {
+            background-color: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #submit-password:hover {
+            background-color: #2980b9;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
         /* Deadline highlight */
         .deadline {
             /* background-color: #ffecb3; */
@@ -90,90 +134,22 @@
     </header>
     
     <main>
-        <section>
-            <h2>Zasady zaliczenia</h2>
-            <p>Ocena końcowa z laboratorium będzie wystawiona na podstawie zrealizowanego projektu. Na ocenę projektu składają się trzy oceny cząstkowe o następujących wagach:</p>
-            <ul>
-                <li><strong>Część I</strong> – 25% (waga: 0.25)</li>
-                <li><strong>Część II</strong> – 25% (waga: 0.25)</li>
-                <li><strong>Kompletny projekt</strong> – 50% (waga: 0.5)</li>
-            </ul>
-            <p>Ocena końcowa jest obliczana według wzoru:</p>
-            <p><strong>ocena końcowa = 0.25 × część I + 0.25 × część II + 0.5 × kompletny projekt</strong></p>
-            
-            <br/>
-            <h3>Warunki zaliczenia projektu</h3>
-            <ul>
-                <li>Każda część projektu musi zostać oceniona co najmniej na <strong>3.0</strong>, w przeciwnym razie projekt nie zostanie zaliczony.</li>
-                <li>Ocena końcowa po zaokrągleniu musi wynosić co najmniej <strong>3.0</strong>.</li>
-            </ul>
-            
-            <br/>
-            <h3>Zaokrąglanie oceny końcowej</h3>
-            <ul>
-                <li>&lt; 3.0 → <span class="important">2.0 (niezaliczone)</span></li>
-                <li>3.0 – 3.25 → <strong>3.0</strong></li>
-                <li>3.26 – 3.75 → <strong>3.5</strong></li>
-                <li>3.76 – 4.25 → <strong>4.0</strong></li>
-                <li>4.26 – 4.75 → <strong>4.5</strong></li>
-                <li>&ge; 4.76 → <strong>5.0</strong></li>
-            </ul>
-            
-            <br/>
-            <h3>Opóźnienia w oddaniu projektu</h3>
-            <ul>
-                <li>Każde rozpoczęte opóźnienie w oddaniu którejkolwiek części projektu  <strong>o tydzień</strong> skutkuje obniżeniem oceny <strong>końcowej o 0.5 stopnia</strong>.</li>
-            </ul>
-
-            <br/>
-            <h3>Elementy wpływajaće na ocenę projektu</h3>
-            <ul>
-                <li>Staranność przygotowanych materiałów, w tym raportu, prezentacji, kodu źródłowego oraz dokumentacji.</li>
-                <li>Kompleksowość oraz poprawność rozwiązań.</li>
-                <li>Jakość implementacji i zgodność z wymaganiami projektowymi.</li>
-            </ul>
-        </section>
+        <div id="password-form" class="password-container">
+            <h2>Dostęp do materiałów kursu</h2>
+            <p>Wprowadź hasło, aby uzyskać dostęp do materiałów kursu.</p>
+            <input type="password" id="password-input" placeholder="Wprowadź hasło">
+            <button id="submit-password">Odblokuj dostęp</button>
+            <p id="error-message" class="error-message hidden">Nieprawidłowe hasło. Spróbuj ponownie.</p>
+        </div>
         
-        <section>
-            <h2>Harmonogram zajęć</h2>
-            <p>Zajęcia oraz termin oddania projektu odbywają się według poniższego harmonogramu:</p>
-            
-            <h3>Tydzień parzysty (8 zajęć)</h3>
-            <h4>Grupy: 3, 5, 7</h4>
-            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
-                <li><strong>07.03.2025</strong> Zajęcia wprowadzające</li>
-                <li><strong>21.03.2025</strong> Tutorial 1: Python + przetarzanie danych</li>
-                <li class="deadline">⚠️ <strong>03.04.2025</strong> Termin wysłania części I projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
-                <li><strong>04.04.2025</strong> Prezentacje części I projektu</li>
-                <li><strong>16.05.2025</strong> Tutorial 2: Podstawowe modele uczenia maszynowego</li>
-                <li><strong>23.05.2025</strong> Tutorial 3: Techniki optymalizacji modeli uczenia maszynowego </li>
-                <li class="deadline">⚠️ <strong>29.05.2025</strong> Termin wysłania II części projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
-                <li><strong>30.05.2025</strong> Prezentacje części II projektu</li>
-                <li class="deadline">⚠️ <strong>08.06.2025</strong> Termin wysłania kompletnego projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
-                <li><strong><del>13.06.2025</del> 09.06.2025 (online lub PWr)</strong> Zaliczenie projektu</li>
-                <li><strong>24.06.2025</strong> Agenci AI - wprowadzenie</li>
-            </ul>
-
-            <h3>Tydzień nieparzysty (8 zajęć)</h3>
-            <h4>Grupy: 1, 2, 4, 6</h4>
-            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
-                <li><strong>07.03.2025</strong> Zajęcia wprowadzające</li>
-                <li><strong>14.03.2025</strong> Tutorial 1: Python + przetarzanie danych</li>
-                <li class="deadline">⚠️ <strong>27.03.2025</strong> Termin wysłania części I projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
-                <li><strong>28.03.2025</strong> Prezentacje części I projektu</li>
-                <li><strong>11.04.2025</strong> Tutorial 2: Podstawowe modele uczenia maszynowego</li>
-                <li class="deadline">⚠️ <strong>24.04.2025</strong> Termin wysłania części II projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
-                <li><strong>25.04.2025</strong> Prezentacja części II projektu</li>
-                <li><strong>09.05.2025</strong> Tutorial 3: Techniki optymalizacji modeli uczenia maszynowego</li>
-                <li class="deadline">⚠️ <strong>25.05.2025</strong> Termin wysłania kompletnego projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
-                <li><strong><del>06.06.2025</del> 26-28.05.2025 (online lub PWr)</strong> Zaliczenie projektu <em>Uwaga! Będzie moliwość zaliczenia projektu 23.05.2025 na zajęciach grup 3, 5, 7</em></li>
-                <li><strong>18.06.2025</strong> Agenci AI - wprowadzenie</li>
-            </ul>
-        </section>
+        <!-- This div will contain the encrypted content -->
+        <div id="course-content" class="hidden" data-encrypted-content="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"></div>
     </main>
     
     <footer>
         <p>&copy; 2025 WIT, Politechnika Wrocławska. Wszelkie prawa zastrzeżone.</p>
     </footer>
+
+    <script src="content-crypto.js"></script>
 </body>
 </html> 
