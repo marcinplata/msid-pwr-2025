@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metody systemowe i decyzyjne (Laboratoria)</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #3498db;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Deadline highlight */
+        .deadline {
+            /* background-color: #ffecb3; */
+            /* padding: 0.5rem; */
+            /* border-left: 4px solid #f39c12; */
+            /* margin-bottom: 0.5rem; */
+            /* color: #7d5a00; */
+            list-style-type: none;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Metody systemowe i decyzyjne (Laboratoria)</h1>
+        <p>Semestr letni 2024/25</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Zasady zaliczenia</h2>
+            <p>Ocena końcowa z laboratorium będzie wystawiona na podstawie zrealizowanego projektu. Na ocenę projektu składają się trzy oceny cząstkowe o następujących wagach:</p>
+            <ul>
+                <li><strong>Część I</strong> – 25% (waga: 0.25)</li>
+                <li><strong>Część II</strong> – 25% (waga: 0.25)</li>
+                <li><strong>Kompletny projekt</strong> – 50% (waga: 0.5)</li>
+            </ul>
+            <p>Ocena końcowa jest obliczana według wzoru:</p>
+            <p><strong>ocena końcowa = 0.25 × część I + 0.25 × część II + 0.5 × kompletny projekt</strong></p>
+            
+            <br/>
+            <h3>Warunki zaliczenia projektu</h3>
+            <ul>
+                <li>Każda część projektu musi zostać oceniona co najmniej na <strong>3.0</strong>, w przeciwnym razie projekt nie zostanie zaliczony.</li>
+                <li>Ocena końcowa po zaokrągleniu musi wynosić co najmniej <strong>3.0</strong>.</li>
+            </ul>
+            
+            <br/>
+            <h3>Zaokrąglanie oceny końcowej</h3>
+            <ul>
+                <li>&lt; 3.0 → <span class="important">2.0 (niezaliczone)</span></li>
+                <li>3.0 – 3.25 → <strong>3.0</strong></li>
+                <li>3.26 – 3.75 → <strong>3.5</strong></li>
+                <li>3.76 – 4.25 → <strong>4.0</strong></li>
+                <li>4.26 – 4.75 → <strong>4.5</strong></li>
+                <li>&ge; 4.76 → <strong>5.0</strong></li>
+            </ul>
+            
+            <br/>
+            <h3>Opóźnienia w oddaniu projektu</h3>
+            <ul>
+                <li>Każde rozpoczęte opóźnienie w oddaniu którejkolwiek części projektu  <strong>o tydzień</strong> skutkuje obniżeniem oceny <strong>końcowej o 0.5 stopnia</strong>.</li>
+            </ul>
+
+            <br/>
+            <h3>Elementy wpływajaće na ocenę projektu</h3>
+            <ul>
+                <li>Staranność przygotowanych materiałów, w tym raportu, prezentacji, kodu źródłowego oraz dokumentacji.</li>
+                <li>Kompleksowość oraz poprawność rozwiązań.</li>
+                <li>Jakość implementacji i zgodność z wymaganiami projektowymi.</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Harmonogram zajęć</h2>
+            <p>Zajęcia oraz termin oddania projektu odbywają się według poniższego harmonogramu:</p>
+            
+            <h3>Tydzień parzysty (8 zajęć)</h3>
+            <h4>Grupy: 3, 5, 7</h4>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li><strong>07.03.2025</strong> Zajęcia wprowadzające</li>
+                <li><strong>21.03.2025</strong> Tutorial 1: Python + przetarzanie danych</li>
+                <li class="deadline">⚠️ <strong>03.04.2025</strong> Termin wysłania części I projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
+                <li><strong>04.04.2025</strong> Prezentacje części I projektu</li>
+                <li><strong>16.05.2025</strong> Tutorial 2: Podstawowe modele uczenia maszynowego</li>
+                <li><strong>23.05.2025</strong> Tutorial 3: Techniki optymalizacji modeli uczenia maszynowego </li>
+                <li class="deadline">⚠️ <strong>29.05.2025</strong> Termin wysłania II części projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
+                <li><strong>30.05.2025</strong> Prezentacje części II projektu</li>
+                <li class="deadline">⚠️ <strong>08.06.2025</strong> Termin wysłania kompletnego projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
+                <li><strong><del>13.06.2025</del> 09.06.2025 (online lub PWr)</strong> Zaliczenie projektu</li>
+                <li><strong>24.06.2025</strong> Agenci AI - wprowadzenie</li>
+            </ul>
+
+            <h3>Tydzień nieparzysty (8 zajęć)</h3>
+            <h4>Grupy: 1, 2, 4, 6</h4>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li><strong>07.03.2025</strong> Zajęcia wprowadzające</li>
+                <li><strong>14.03.2025</strong> Tutorial 1: Python + przetarzanie danych</li>
+                <li class="deadline">⚠️ <strong>27.03.2025</strong> Termin wysłania części I projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
+                <li><strong>28.03.2025</strong> Prezentacje części I projektu</li>
+                <li><strong>11.04.2025</strong> Tutorial 2: Podstawowe modele uczenia maszynowego</li>
+                <li class="deadline">⚠️ <strong>24.04.2025</strong> Termin wysłania części II projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
+                <li><strong>25.04.2025</strong> Prezentacja części II projektu</li>
+                <li><strong>09.05.2025</strong> Tutorial 3: Techniki optymalizacji modeli uczenia maszynowego</li>
+                <li class="deadline">⚠️ <strong>25.05.2025</strong> Termin wysłania kompletnego projektu (na adres e-mail: <a href="mailto:marcin.plata@pwr.edu.pl">marcin.plata@pwr.edu.pl</a>)</li>
+                <li><strong><del>06.06.2025</del> 26-28.05.2025 (online lub PWr)</strong> Zaliczenie projektu <em>Uwaga! Będzie moliwość zaliczenia projektu 23.05.2025 na zajęciach grup 3, 5, 7</em></li>
+                <li><strong>18.06.2025</strong> Agenci AI - wprowadzenie</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 WIT, Politechnika Wrocławska. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html> 
